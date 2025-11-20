@@ -21,7 +21,21 @@ body {
 a {
     color: inherit;
 }
-header, footer {
+header {
     background-color: var(--cor-secundaria);
     padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    hover: color var(--cor-primaria);
+    
+}
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 16px 32px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
