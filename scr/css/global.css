@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #062446; /* cor da sua paleta */
+    color: #ffffff;
+}
+
+:root {
+    --cor-primaria: #002152;
+    --cor-secundaria: #062446;
+    --cor-destaque: #3e91ff;
+
+    --texto-claro: #ffffff;
+    --texto-escuro: #0d0d0d;
+}
+a {
+    color: inherit;
+}
+header, footer {
+    background-color: var(--cor-secundaria);
+    padding: 16px 32px;
+}
