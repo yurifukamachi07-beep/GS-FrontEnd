@@ -1,0 +1,223 @@
+
+.header{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:9999;
+    backdrop-filter:blur(6px);
+    background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.25));
+    border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+
+.nav{
+    max-width:1400px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:16px 24px;
+}
+
+/* colunas */
+.nav-left, .nav-center, .menu, .nav-right {
+    display:flex;
+    align-items:center;
+}
+
+.nav-left{
+    flex:1;
+    gap:12px
+}
+.nav-center, .menu{flex:1;
+    justify-content:center;
+    list-style:none;
+    gap:36px;
+    display:flex;
+}
+.nav-right{flex:1;
+    justify-content:flex-end
+}
+
+/* LOGO */
+.LogoLinking{
+    height:48px;
+    width:auto}
+.brand-name{
+    font-size:22px;
+    font-weight:700;
+    color:var(--cor-destaque);
+    margin-left:8px}
+
+.menu li, .nav-center li{
+    list-style:none;
+}
+.menu li a, .nav-center li a{
+    color:var(--texto-claro);
+    font-size:18px;
+    font-weight:600;
+    padding:8px 6px;
+    border-radius:8px;
+    transition:var(--transition);
+}
+.menu li a:hover, .nav-center li a:hover{
+    color:#fff;
+    background:rgba(62,145,255,0.08);
+    transform:translateY(-2px);
+}
+
+
+.banner {
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/landing/bannerLanding.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.about{padding:80px 20px;
+    display:flex; justify-content:center}
+.about-box{
+    padding:36px;
+    border-radius:18px;
+    max-width:900px;
+    text-align:center;
+    backdrop-filter: blur(6px);
+}
+.about-box h2{
+    font-size:32px;
+    color:var(--cor-destaque);
+    margin-bottom:14px}
+.about-box p{
+    font-size:18px;
+    color:var(--texto-secundario)
+}
+
+/* PROFISSIONAIS / CARDS */
+.professionals{
+    padding:70px 20px;
+    text-align:center}
+.section-title{
+    font-size:32px;
+    margin-bottom:36px;
+    color:var(--cor-destaque)}
+
+.cards-container{
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    flex-wrap:wrap;
+    margin-bottom:22px;
+}
+
+/* CARD */
+.card{
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(6px);
+    border-radius:16px;
+    width:300px;
+    padding:20px;
+    transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+}
+
+.card-photo{
+    width:100%;
+    height:160px;
+    background:linear-gradient(135deg, rgba(62,145,255,0.12), rgba(0,0,0,0.05));
+    border-radius:12px;
+    margin-bottom:14px;
+}
+
+.card h3{
+    color:var(--texto-claro);
+    margin-bottom:6px;
+    font-size:20px}
+.card .role{
+    color:var(--cor-destaque);
+    font-weight:600;margin-bottom:10px}
+.card-info{
+    color:var(--texto-secundario);
+    font-size:14px;
+    opacity:0;
+    max-height:0;
+    transition:opacity 0.35s ease, max-height 0.35s ease;
+    overflow:hidden;
+}
+
+/* hover */
+.card:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(2,8,20,0.6);
+    border-color: rgba(62,145,255,0.28);
+}
+.card:hover .card-info{
+    opacity:1;
+    max-height:160px;
+}
+
+.btn-recommend {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    background: linear-gradient(90deg, var(--cor-destaque), #58a7ff);
+    color: #042033;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 8px 22px rgba(62,145,255,0.20);
+}
+
+.btn-recommend:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(62,145,255,0.32);
+}
+
+.btn-recommend:active {
+    transform: scale(0.96);
+}
+
+
+/* botão ver mais */
+.btn-verprofissionais{
+    display:inline-block;
+    margin-top:18px;
+    padding:12px 20px;
+    border-radius:12px;
+    background:linear-gradient(90deg,var(--cor-destaque), #58a7ff);
+    color:#042033;
+    font-weight:700;
+    box-shadow: 0 8px 20px rgba(62,145,255,0.12);
+    transition:transform var(--transition);
+}
+.btn-verprofissionais:hover{
+    transform:translateY(-3px)
+}
+
+
+@media (max-width:900px){
+    .nav{padding:12px}
+    .hero{height:520px}
+    .hero-text h1{font-size:34px}
+    .cards-container{gap:18px}
+    .card{width:46%}
+}
+
+@media (max-width:600px){
+    .nav-center, .menu{display:none}
+    .nav-left{justify-content:flex-start}
+    .nav-right{justify-content:flex-end}
+    .hero{height:420px}
+    .hero-text h1{font-size:26px}
+    .card{width:100%}
+    .about{padding:40px 12px}
+}

@@ -3,64 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Work - Work Plataform</title>
-    <link rel="stylesheet" href="./scr/css/landing.css">
+    <title>Linking - Plataforma Profissional</title>
+
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/landing.css">
 </head>
 
 <body>
-<!-- Cabeçalho com menu de navegação -->
-    <header class="header">
-        <nav class="menu">
-            <ul>
-                <li class="menu-item"><a href="#home">Home</a></li>
-                <li class="menu-item"><a href="./scr/pages/professionals.html">Profissionais</a></li>
-                <li class="menu-item"><a href="./scr/pages/quiz.html">Quiz</a></li>
-                <li class="menu-item"><a href="./scr/pages/perfil.html">Perfil</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <!-- Conteudo hero -->
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Future Work - Work Plataform</h1>
-                <p class="hero-description">Conectando talentos e oportunidades para um futuro melhor.</p>
-                <a href="./scr/pages/professionals.html" class="hero-button">Explorar Profissionais</a>
+
+<header class="header">
+    <nav class="nav">
+        <div class="nav-left">
+            <img class="LogoLinking" src="./src/img/icon/LogoLinking.png" alt="Linking">
+        </div>
+        <ul class="nav-center">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#professionals">Profissionais</a></li>
+            <li><a href="./src/pages/quiz.html">Quiz</a></li>
+            <li><a href="./src/pages/perfil.html">Perfil</a></li>
+        </ul>
+        <div class="nav-right"></div>
+
+    </nav>
+</header>
+
+    <!-- Hero-->
+    <section id="hero" class="hero">
+        <div class="banner"></div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="about" class="about">
+        <div class="about-box">
+            <h2>Sobre Nós</h2>
+            <p>
+                A Linking é uma plataforma moderna que conecta profissionais qualificados às oportunidades ideais. 
+                Nosso foco é unir talentos às necessidades reais do mercado de forma rápida e eficaz, promovendo 
+                uma experiência mais inteligente e eficiente.
+            </p>
+        </div>
+    </section>
+
+   <!-- PROFISSIONAIS EM DESTAQUE -->
+    <section id="professionals" class="professionals">
+        <h2 class="section-title">Profissionais em Destaque</h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-photo"></div>
+                 <h3>João Silva</h3>
+                    <p class="role">Desenvolvedor Web</p>
+                    <div class="card-info">
+                        <p>HTML • CSS • JS</p>
+                        <p>React • Node.js</p>
+                        <button class="btn-recommend">Recomendar Profissional</button>
+                </div>
             </div>
-        </section>
 
-        <!-- Sobre nós -->
-        <section id="about" class="about">
-            <h2 class="section-title">Sobre Nós</h2>
-            <p class="section-description">A Future Work é uma plataforma inovadora que conecta profissionais talentosos com oportunidades de trabalho ideais. Nossa missão é facilitar o encontro entre habilidades e necessidades do mercado, promovendo um futuro de trabalho mais eficiente e satisfatório para todos.</p>
-        </section>
-
-        <!-- Cards profissionais -->
-        <section id="professionals" class="professionals">
-            <h2 class="section-title">Profissionais em Destaque</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <h3 class="card-name">João Silva</h3>
-                    <p class="card-description">Desenvolvedor Web</p>
-                </div>
-                <div class="card">
-                    <h3 class="card-name">Maria Oliveira</h3>
-                    <p class="card-description">Designer Gráfico</p>
-                </div>
-                <div class="card">
-                    <h3 class="card-name">Carlos Souza</h3>
-                    <p class="card-description">Analista de Dados</p>
+            <div class="card">
+                <div class="card-photo"></div>
+                    <h3>Maria Oliveira</h3>
+                    <p class="role">Designer Gráfico</p>
+                    <div class="card-info">
+                        <p>Branding • UI Design</p>
+                        <p>Figma • Illustrator</p>
+                        <button class="btn-recommend">Recomendar Profissional</button>
                 </div>
             </div>
-            <a href="./scr/pages/professionals.html" class="btn-verprofissionais">Ver mais profissionais</a>
-        </section>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <p> ®️ 2024 Future Work. Todos os direitos reservados.</p>
-        </footer>
 
-    </main>
+            <div class="card">
+                <div class="card-photo"></div>
+                    <h3>Carlos Souza</h3>
+                    <p class="role">Analista de Dados</p>
+                    <div class="card-info">
+                        <p>Python • SQL</p>
+                        <p>Power BI • ML</p>
+                        <button class="btn-recommend">Recomendar Profissional</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-photo"></div>
+                    <h3>Fernanda Lima</h3>
+                    <p class="role">Marketing Digital</p>
+                    <div class="card-info">
+                        <p>SEO • Copywriting</p>
+                        <p>Meta Ads • Analytics</p>
+                        <button class="btn-recommend">Recomendar Profissional</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-photo"></div>
+                    <h3>Ricardo Alves</h3>
+                    <p class="role">Engenheiro de Software</p>
+                    <div class="card-info">
+                        <p>Java • Spring Boot</p>
+                        <p>DevOps • Cloud</p>
+                        <button class="btn-recommend">Recomendar Profissional</button>
+                </div>
+            </div>
+        </div>
+
+        <a href="./src/pages/professionals.html" class="btn-verprofissionais">Ver mais profissionais</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Linking. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
