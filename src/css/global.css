@@ -10,8 +10,6 @@
   --cor-destaque:#3e91ff;
   --texto-claro:#F5F7FB;
   --texto-secundario:#cfd9ee;
-  --glass: rgba(255,255,255,0.04);
-  --glass-strong: rgba(255,255,255,0.08);
   --radius:14px;
   --transition:0.25s ease;
 }
@@ -21,7 +19,6 @@
     position:sticky;
     top:0;
     z-index:9999;
-    backdrop-filter:blur(6px);
     background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.25));
     border-bottom:1px solid rgba(255,255,255,0.03);
     }
