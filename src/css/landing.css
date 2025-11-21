@@ -1,72 +1,4 @@
-
-.header{
-    width:100%;
-    position:sticky;
-    top:0;
-    z-index:9999;
-    backdrop-filter:blur(6px);
-    background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.25));
-    border-bottom:1px solid rgba(255,255,255,0.03);
-    }
-
-.nav{
-    max-width:1400px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-    padding:16px 24px;
-}
-
-/* colunas */
-.nav-left, .nav-center, .menu, .nav-right {
-    display:flex;
-    align-items:center;
-}
-
-.nav-left{
-    flex:1;
-    gap:12px
-}
-.nav-center, .menu{flex:1;
-    justify-content:center;
-    list-style:none;
-    gap:36px;
-    display:flex;
-}
-.nav-right{flex:1;
-    justify-content:flex-end
-}
-
-/* LOGO */
-.LogoLinking{
-    height:48px;
-    width:auto}
-.brand-name{
-    font-size:22px;
-    font-weight:700;
-    color:var(--cor-destaque);
-    margin-left:8px}
-
-.menu li, .nav-center li{
-    list-style:none;
-}
-.menu li a, .nav-center li a{
-    color:var(--texto-claro);
-    font-size:18px;
-    font-weight:600;
-    padding:8px 6px;
-    border-radius:8px;
-    transition:var(--transition);
-}
-.menu li a:hover, .nav-center li a:hover{
-    color:#fff;
-    background:rgba(62,145,255,0.08);
-    transform:translateY(-2px);
-}
-
-
+/* Banner landing page */
 .banner {
     width: 100%;
     height: 600px;
@@ -76,8 +8,7 @@
     background-repeat: no-repeat;
 }
 
-
-
+/* Sobre nós */
 .about{padding:80px 20px;
     display:flex; justify-content:center}
 .about-box{
@@ -96,7 +27,7 @@
     color:var(--texto-secundario)
 }
 
-/* PROFISSIONAIS / CARDS */
+/* Profissionais */
 .professionals{
     padding:70px 20px;
     text-align:center}
@@ -112,8 +43,15 @@
     flex-wrap:wrap;
     margin-bottom:22px;
 }
+.card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
 
-/* CARD */
+/* cards */
 .card{
     background:var(--glass);
     border:1px solid rgba(255,255,255,0.06);
