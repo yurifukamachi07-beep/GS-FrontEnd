@@ -1,12 +1,36 @@
-/* Banner landing page */
-.banner {
+/* SLIDESHOW CSS */
+.banner-slider {
     width: 100%;
     height: 600px;
-    background-image: url(../img/landing/bannerLanding.png); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    animation: slideShow 16s infinite ease-in-out;
 }
+
+/* ANIMAÇÃO 3 BANNERS */
+@keyframes slideShow {
+
+    /* slide 1 */
+    0%,
+    30% {
+        background-image: url("../img/landing/bannerLanding.png");
+    }
+
+    /* slide 2 */
+    33%,
+    63% {
+        background-image: url("../img/landing/destaque1.png");
+    }
+
+    /* slide 3 */
+    66%,
+    100% {
+        background-image: url("../img/landing/destaque2.png");
+    }
+}
+
 
 /* Sobre */
 .about{
@@ -19,91 +43,81 @@
     border-radius:18px;
     max-width:900px;
     text-align:center;
+    background:rgba(0,0,0,0.25);
     backdrop-filter: blur(6px);
 }
 .about-box h2{
     font-size:32px;
     color:var(--cor-destaque);
-    margin-bottom:auto
 }
 .about-box p{
     font-size:18px;
-    color:var(--texto-secundario)
+    color:var(--texto-secundario);
 }
 
 /* Profissionais */
 .professionals{
     padding:70px 20px;
-    text-align:center}
+    text-align:center;
+}
 .section-title{
     font-size:32px;
     margin-bottom:36px;
-    color:var(--cor-destaque)}
+    color:var(--cor-destaque);
+}
 
 .cards-container{
     display:flex;
     justify-content:center;
     gap:28px;
     flex-wrap:wrap;
-    margin-bottom:22px;
 }
+
+/* Foto */
 .card-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
-    display: block;
 }
 
-/* cards */
+/* CARD */
 .card{
-    background:var(--glass);
-    border:1px solid rgba(255,255,255,0.06);
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.12);
     backdrop-filter: blur(6px);
     border-radius:16px;
     width:300px;
     padding:20px;
-    transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    transition:0.3s;
     cursor:pointer;
-    position:relative;
     overflow:hidden;
 }
 
-.card-photo{
-    width:100%;
-    height:160px;
-    background:linear-gradient(135deg, rgba(62,145,255,0.12), rgba(0,0,0,0.05));
-    border-radius:12px;
-    margin-bottom:14px;
+.card:hover{
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(2,8,20,0.6);
+    border-color: var(--cor-destaque);
 }
 
-.card h3{
-    color:var(--texto-claro);
-    margin-bottom:6px;
-    font-size:20px}
-.card .role{
+.role{
     color:var(--cor-destaque);
-    font-weight:600;margin-bottom:10px}
+    font-weight:600;
+}
+
 .card-info{
     color:var(--texto-secundario);
-    font-size:14px;
     opacity:0;
     max-height:0;
-    transition:opacity 0.35s ease, max-height 0.35s ease;
-    overflow:hidden;
+    transition:0.35s ease;
 }
 
-/* hover */
-.card:hover{
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 18px 40px rgba(2,8,20,0.6);
-    border-color: rgba(62,145,255,0.28);
-}
 .card:hover .card-info{
     opacity:1;
-    max-height:160px;
+    max-height:200px;
 }
 
+/* botão recomendar */
 .btn-recommend {
     width: 100%;
     margin-top: 14px;
@@ -115,19 +129,12 @@
     color: #042033;
     border: none;
     cursor: pointer;
-    transition: var(--transition);
-    box-shadow: 0 8px 22px rgba(62,145,255,0.20);
+    transition: 0.3s;
 }
 
 .btn-recommend:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 26px rgba(62,145,255,0.32);
 }
-
-.btn-recommend:active {
-    transform: scale(0.96);
-}
-
 
 /* botão ver mais */
 .btn-verprofissionais{
@@ -138,28 +145,8 @@
     background:linear-gradient(90deg,var(--cor-destaque), #58a7ff);
     color:#042033;
     font-weight:700;
-    box-shadow: 0 8px 20px rgba(62,145,255,0.12);
-    transition:transform var(--transition);
+    transition:0.3s;
 }
 .btn-verprofissionais:hover{
     transform:translateY(-3px)
-}
-
-
-@media (max-width:900px){
-    .nav{padding:12px}
-    .hero{height:520px}
-    .hero-text h1{font-size:34px}
-    .cards-container{gap:18px}
-    .card{width:46%}
-}
-
-@media (max-width:600px){
-    .nav-center, .menu{display:none}
-    .nav-left{justify-content:flex-start}
-    .nav-right{justify-content:flex-end}
-    .hero{height:420px}
-    .hero-text h1{font-size:26px}
-    .card{width:100%}
-    .about{padding:40px 12px}
 }
