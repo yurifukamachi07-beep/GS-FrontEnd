@@ -11,12 +11,12 @@ Este projeto foi construído com **HTML, CSS e JavaScript**, focado em boas prá
 
 ## Deploy do Projeto
 Acesse a versão final hospedada no GitHub Pages:  
- **https://yurifukamachi07-beep.github.io/GS-FrontEnd/**
+ **[https://yurifukamachi07-beep.github.io/GS-FrontEnd/]**
 
 ---
 
 ## Repositório no GitHub
- **https://github.com/yurifukamachi07-beep/GS-FrontEnd.git**
+ **[https://github.com/yurifukamachi07-beep/GS-FrontEnd.git]**
 
 ---
 
